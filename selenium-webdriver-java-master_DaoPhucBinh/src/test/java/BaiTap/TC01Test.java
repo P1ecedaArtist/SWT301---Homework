@@ -69,7 +69,7 @@ public class TC01Test {
             scc = (scc+1);
             TakesScreenshot screenshot =((TakesScreenshot)driver);
             File srcFile= screenshot.getScreenshotAs(OutputType.FILE);
-            String png =("/Users/daophucbinh/FPT/Fall23/SWT/" + scc +".png");
+            String png =("/Users/daophucbinh/Downloads/selenium-webdriver-java-master_DaoPhucBinh/src/test/resources/png/TC01_");
             FileHandler.copy(srcFile, new File(png));
 
         }catch(Exception e){
