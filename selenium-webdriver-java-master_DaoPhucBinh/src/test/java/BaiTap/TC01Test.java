@@ -12,21 +12,6 @@ import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 
 import java.io.File;
-/*
-
-Test Steps
-
-Step 1. Go to http://live.techpanda.org/
-
-Step 2. Verify Title of the page
-
-Step 3. Click on -> MOBILE -> menu
-
-Step 4. In the list of all mobile , select SORT BY -> dropdown as name
-
-Step 5. Verify all products are sorted by name
-
-*/
 
 @Test
 public class TC01Test {
@@ -58,18 +43,18 @@ public class TC01Test {
             //debug
             Thread.sleep(2000);
 
-            //Step 4: In the list of all mobile , select SORT BY -> dropdown as name
+            //Step 4:
             new Select(driver.findElement(By.xpath("(//select[@title='Sort By'])[1]"))).selectByVisibleText("Name");
 
             //debug
             Thread.sleep(2000);
 
-            //step 5: Verify all products are sorted by name
+            //step 5:
             //This wil take screenshot of manager the manager's page after a successful after a successful login
             scc = (scc+1);
             TakesScreenshot screenshot =((TakesScreenshot)driver);
             File srcFile= screenshot.getScreenshotAs(OutputType.FILE);
-            String png =("/Users/daophucbinh/Downloads/selenium-webdriver-java-master_DaoPhucBinh/src/test/resources/png/TC01_");
+            String png =("/Users/daophucbinh/Downloads/selenium-webdriver-java-master_DaoPhucBinh/src/test/resources/png/TC01_" + scc +".png");
             FileHandler.copy(srcFile, new File(png));
 
         }catch(Exception e){
